@@ -1,0 +1,289 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray: #9DA49C;
+    --linegray: #565656;
+}
+
+body {
+    font-size: 62.5%;
+    word-break: keep-all;
+    margin: 0;
+}
+
+/* typography */
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    line-height: 101%;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: var(--white);
+}
+
+.eng {
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 115%;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 60px;
+    color: var(--white);
+}
+
+span {
+    color: var(--white);
+}
+
+.font-32 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.font-16 {
+    font-size: 1rem;
+    line-height: 160%;
+    color: var(--white);
+}
+
+.font-12 {
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.caption {
+    margin-top: 0.5rem;
+}
+
+/* fit */
+.margin-bottom-last {
+    margin-bottom: 300px;
+}
+
+.margin-last {
+    margin-bottom: 10rem;
+}
+
+
+
+/* header */
+.menu > a  {
+    font-size: 1.2rem;
+}
+
+li > a {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+a:hover {
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+a:not(hover) {
+    color: var(--gray);
+    transition: all 0.2s ease-in-out;
+}
+
+p {
+    margin: 0 0 1rem;
+    font-family: system-ui, -apple-system,'Helvetica Neue', sans-serif;
+}
+
+ul, li {
+    margin: 0 0 1.3rem;
+    font-family: system-ui, -apple-system,'Helvetica Neue', sans-serif;
+    appearance: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.line {
+    border: 0.2px var(--linegray) solid;
+}
+
+video {
+    width: 100%;
+    border: 0.2px var(--linegray) solid;
+    border-radius: 10px;
+}
+
+.img-logo {
+    width: 200px;
+    padding: 20px 0 0 40px;
+}
+
+.top-line {
+    border-top: 1px var(--white) solid;
+    width: 100%;
+}
+
+.menu-wrapper {
+    width: 20rem;
+    top: 0;
+    position: fixed;
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+.menu-set {
+    padding: 20px 0 160px;
+    font-family: '태고딕';
+    font-size: 1rem;
+}
+
+.sub-menu {
+    margin: 1em 0 1.6rem 0.7em;
+    padding-left: 18px;
+
+}
+
+/* page */
+
+#page {
+    background-color: var(--black);
+    padding: 1.6rem 3rem 0 8rem;
+    margin-left: 288px; 
+    /* margin-left: calc(100vw - 72.2vw - 246px);  */
+}
+
+/* grid */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+}
+
+.grid-7-line {
+    display: grid;
+    grid-template-columns:0.42fr 1fr;
+}
+
+.grid-span-1 {
+    grid-column: span 1;
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+
+.grid-span-3 {
+    grid-column: span 3;
+}
+
+.grid-span-4 {
+    grid-column: span 4;
+}
+
+.grid-span-5 {
+    grid-column: span 5;
+}
+
+.grid-span-6 {
+    grid-column: span 6;
+}
+
+.grid-span-7 {
+    grid-column: span 7;
+}
+
+.grid-span-8 {
+    grid-column: span 8;
+}
+
+.grid-span-9 {
+    grid-column: span 9;
+}
+
+.grid-span-10 {
+    grid-column: span 10;
+}
+
+.grid-span-12 {
+    grid-column: span 12;
+}
+
+.overview-list {
+    padding: 0;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.overview-list > a {
+    color: var(--white);
+}
+
+.overview-list > a:hover {
+    color: var(--gray);
+}
+
+
+/* footer */
+footer {
+    color: var(--white);
+    padding-bottom: 3rem;
+    bottom: 0;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 1184px) {
+    
+
+}
+@media screen and (max-width: 940px) {
+    header {
+        display: none;
+    }
+    #page {
+        margin-left: 0;
+        padding: 2rem;
+    }
+    #page > h1 {
+        margin-bottom: 3rem !important;
+    }
+    .font-16 {
+        font-size: 0.7rem;
+    }
+
+    .grid-12 {
+        grid-column-gap: 5px !important;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+
+    .font-32 {
+        font-size: 1rem;
+    }
+    .font-12 {
+        font-size: 0.5rem;
+    }
+    .back {
+        align-self: end;
+        display: block !important;
+    }
+    .back > a {
+        font-size: 0.7rem;
+    }
+
+}

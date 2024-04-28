@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="./image/favicon/icon-192x192.png">
+    <title>Schwarzwald Brand System</title>
+</head>
+<body>
+    <header>
+        <div class="menu-wrapper">
+            <a href="index.html"><img class="img-logo" src="./image/logo01.png" alt=""></a>
+            <div class="menu-set">
+                <ul>
+                    <li class="menu"><a href="./subhtml/sch1.html">1 소개</a></li>
+                        
+                    <li><a href="./subhtml/sch2.html" class="menu">2 그래픽 비주얼</a></li>
+                        
+                    <li><a href="./subhtml/sch3.html" class="menu">3 디자인 시스템</a></li>
+                        
+                    <li><a href="./subhtml/sch4.html" class="menu">4 적용</a></li>
+                        
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="page" class="grid-12" style="grid-template-columns: repeat(12, 1fr);">
+        <h1 class="grid-span-6 eng" style="margin-bottom: 7rem;">Schwarzwald</h1>
+        <h1 class="grid-span-6 eng" style="margin-bottom: 7rem;">Identity Guidelines</h1>
+        <div class="grid-span-3"></div>
+        <div class="grid-span-9">
+            <img src="./image/overview01.png" alt="" style="width: 100%; margin-bottom: 4rem;">
+        </div>
+        <span class="grid-span-6"></span>
+        <div class="grid-span-4 font-16 margin-bottom-last">  
+                <div style="margin-bottom: 4rem;">
+                    뉴하스는 슈발츠발트의 브랜드 컨셉, 로고, 그래픽 비주얼, 디자인 시스템, 모션 등
+                    브랜드 경험 전반을 디자인했습니다. 슈발츠발트의 기존 가치를 유지하면서,
+                    사람들에게 전달하는 새로운 경험들을 어필할 수 있는 차별화된 브랜드 아이덴티티를 구축하였습니다.
+                </div>
+                <p class="overview-list font-32"><a href="./subhtml/sch1.html"><span class="eng" style="padding-right: 4rem;">1</span> 소개</a></p>
+                <p class="overview-list font-32"><a href="./subhtml/sch2.html"><span class="eng" style="padding-right: 4rem;">2</span> 그래픽 비주얼</a></p>
+                <p class="overview-list font-32"><a href="./subhtml/sch3.html"><span class="eng" style="padding-right: 4rem;">3</span> 디자인 시스템</a></p>
+                <p class="overview-list font-32"><a href="./subhtml/sch4.html"><span class="eng" style="padding-right: 4rem;">4</span> 적용</a></p>
+        </div>
+    </div>
+    <footer id="page" class="grid-12 font-16" style="padding-bottom: 3rem;">
+        <div class="grid-span-6">
+            <a href="#top">위로 가기</a>
+        </div>
+        <div class="grid-span-2">
+            브랜드 컨설팅 문의<br>
+            @neu.has
+        </div>
+        <div class="grid-span-4">
+            ©2024 Neuhas
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // 내부 링크 클릭 이벤트 핸들러
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault(); // 기본 동작 방지
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top // 해당 섹션의 상단으로 스크롤
+                }, 800); // 스크롤 속도 (밀리초)
+            }
+        });
+    });
+    </script>
+</body>
+</html>

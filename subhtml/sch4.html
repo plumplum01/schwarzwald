@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="../image/favicon/icon-192x192.png">
+    <title>Schwarzwald Brand System</title>
+</head>
+<body>
+    <header>
+        <div class="menu-wrapper">
+            <a href="../index.html"><img class="img-logo" src="../image/logo01.png" alt=""></a>
+            <div class="menu-set">
+                <ul>
+                    <li class="menu"><a href="./sch1.html">1 소개</a></li>
+                        
+                    <li><a href="./sch2.html" class="menu">2 그래픽 비주얼</a></li>
+                        
+                    <li><a href="./sch3.html" class="menu">3 디자인 시스템</a></li>
+                        
+                    <li><a href="./sch4.html" class="menu" style="color: var(--white);">4 적용</a></li>
+                        <ul class="menu sub-menu">
+                            <li><a href="#service">셈여림 서비스</a></li>
+                            <li><a href="#application">어플리케이션</a></li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="top"></div>
+    <div id="page" class="grid-12" style="grid-template-columns: repeat(12, 1fr);">
+        <h1 class="grid-span-6 eng" style="margin-bottom: 18rem;">4
+            <p class="back" style="display: none;"><a href="../index.html">뒤로가기</a></p>
+        </h1>
+        <h1 class="grid-span-6 eng" style="margin-bottom: 18rem;">적용</h1>
+        <div id="service" class="grid-span-4" style="padding-top:80px;">
+            <h2 style="margin-bottom: 1.5rem;">셈여림 서비스</h2>
+            <span class="font-16">단골 고객을 위해 설계된 셈여림 서비스는 음악용어를 통해서 개인화된 서비스를 제공합니다. 
+                                    각자의 취향에 맞는 원두와 이벤트 추천을 통해 고객들에게 새로운 경험을 위한 발판을 
+                                    마련합니다.
+            </span>
+        </div>
+        <div class="grid-span-2"></div>
+        <div class="grid-span-6" style="margin-top: 4rem; margin-bottom: 20px; padding-top:80px;">
+            <img src="../image/4application/4_1.png" alt="">
+        </div>
+        <div class="grid-span-6"></div>
+        <div class="grid-span-3" style="margin-bottom: 8rem;">
+            <img src="../image/4application/4_2.png" alt="">
+        </div>
+        <div class="grid-span-3">
+            <img src="../image/4application/4_3.png" alt="">
+        </div>
+        <div id="application" class="grid-span-2" style="padding-top:80px;">
+            <h2 style="margin-bottom: 1.5rem;">어플리케이션</h2>
+        </div>
+        <div class="grid-span-10"></div>
+        <div class="grid-span-5" style="margin-bottom: 10rem;">
+            <video src="../image/4application/4_4.mp4" alt="" loop muted autoplay playsinline></video>
+        </div>
+        <div class="grid-span-1"></div>
+        <div class="grid-span-3" style="align-self: end; margin-bottom: 10rem;">
+            <img class="line" src="../image/4application/4_5.png" alt="">
+        </div>
+        <div class="grid-span-3" style="align-self: end; margin-bottom: 10rem;">
+            <img class="line" src="../image/4application/4_6.png" alt="">
+        </div>
+        <div class="grid-span-12" style="margin-bottom: 6rem;">
+            <video src="../image/4application/4_7.mp4" loop muted autoplay playsinline></video>
+        </div>
+        <div class="grid-span-6" style="margin-bottom: 6rem;">
+            <img src="../image/4application/4_8.png" alt="">
+        </div>
+        <div class="grid-span-6"></div>
+        <div class="grid-span-7"></div>
+        <div class="grid-span-5" style="margin-bottom: 6rem;">
+            <img src="../image/4application/4_9.png" alt="">
+            <p class="caption font-12">매장에 적용된 메뉴판</p>
+        </div>
+        <div class="grid-span-12" style="margin-bottom: 10rem;">
+            <img src="../image/4application/4_10.png" alt="">
+        </div>
+        <div class="grid-span-5"></div>
+        <div class="grid-span-4" style="margin-bottom: 10rem;">
+            <img src="../image/4application/4_11.png" alt="">
+        </div>
+        <div class="grid-span-3">
+            <img src="../image/4application/4_12.png" alt="">
+        </div>
+        <div class="grid-span-12 margin-last">
+            <img src="../image/4application/4_13.png" alt="">
+        </div>
+    </div>
+    <footer id="page" class="grid-12 font-16" style="padding-bottom: 3rem;">
+        <div class="grid-span-6">
+            <a href="#top">위로 가기</a>
+        </div>
+        <div class="grid-span-2">
+            브랜드 컨설팅 문의<br>
+            @neu.has
+        </div>
+        <div class="grid-span-4">
+            ©2024 Neuhas
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // 내부 링크 클릭 이벤트 핸들러
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault(); // 기본 동작 방지
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top // 해당 섹션의 상단으로 스크롤
+                }, {
+                    duration: 1000, // 스크롤 속도 (밀리초)
+                    easing: 'easeOutCubic' // ease-out 효과 적용
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
